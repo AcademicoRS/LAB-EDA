@@ -38,9 +38,7 @@ public class DataSongBase {
          }
          else if (atributo.equals("genre")) 
          {
-            //Comparator<Song> comparator = (s1, s2) -> s1.getGenre().compareTo(s2.getGenre());
-            // Comparator<Song> comparator = (s1, s2) -> s1.getGenre().compareTo(s2.getGenre());
-            //Insertion.sort(songs, comparator);
+           
             Insertion.sort(songs, Comparator.comparing(x->x.getGenre()));
          }
 
@@ -64,35 +62,31 @@ public class DataSongBase {
          if (atributo.equals("id")) 
          {
 
-            Comparator<Song> comparator = (s1, s2) -> s1.getId() - s2.getId();
-            Selection.sort(songs, comparator);
+            Selection.sort(songs, Comparator.comparing(x->x.getId()));
          }
 
          else if (atributo.equals("year")){
-            Comparator<Song> comparator = (s1, s2) -> s1.getYear() - s2.getYear();
-            Selection.sort(songs, comparator);
+            Selection.sort(songs, Comparator.comparing(x->x.getYear()));
          }
 
          else if (atributo.equals("artist"))
          {
-            Comparator<Song> comparator = (s1, s2) -> s1.getArtist().compareTo(s2.getArtist());
-            Selection.sort(songs, comparator);
+            Selection.sort(songs, Comparator.comparing(x->x.getArtist()));
+            
          }
          else if (atributo.equals("genre")) 
          {
-            Comparator<Song> comparator = (s1, s2) -> s1.getGenre().compareTo(s2.getGenre());
-            Selection.sort(songs, comparator);
+            Selection.sort(songs, Comparator.comparing(x->x.getGenre()));
          }
 
          else if (atributo.equals("title")) 
          {
-            Comparator<Song> comparator = (s1, s2) -> s1.getTitle().compareTo(s2.getTitle());
-            Selection.sort(songs, comparator);
+            Selection.sort(songs, Comparator.comparing(x->x.getTitle()));
          }
          else
          {
-            Comparator<Song> comparator = (s1, s2) -> (s1.getPlays() < s2.getPlays()) ? -1 : ((s1.getPlays() == s2.getPlays()) ? 0 : 1);
-            Selection.sort(songs, comparator);
+            Selection.sort(songs, Comparator.comparing(x->x.getPlays()));
+            
          }
       }
 
@@ -120,7 +114,7 @@ public class DataSongBase {
       c.songs.add(new Song(3, "Beat it", "michael jackson", "Pop", 2019, 2000));
       c.songs.add(new Song(1, "Maps", "maroon 5", "Pop", 2020, 1000));
       c.songs.add(new Song(9, "Mao", "Doja cat", "Electronic", 2025, 500));
-
+      c.songs.add(new Song(2, "Bad", "Michael Jackson", "Electronic", 1997, 10));
       int tam = c.songs.size();
 
       for (int i = 0; i < tam; i++) 
@@ -148,10 +142,5 @@ public class DataSongBase {
       StdOut.println();
       StdOut.println("---------------------------------------------");
       StdOut.println("ORDENAMIENTO POR CON BinarySearch: ");
-      
-      
-     c.rank(c, "maroon 5");
-      
-    
    }
 }
