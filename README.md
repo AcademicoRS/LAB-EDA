@@ -1,9 +1,11 @@
 # LAB3-EDA
 
+Este laboratorio recrea como funcionan los metodos de filtro de canciones. Aplicando:
 
--Proyecto filtro de spotify y busqueda
--Implementación con ArrayList
--Implementación con MergeSort
--Implementación con QuickSort
--Implementación con InsertionSort
--Implementación con SelectionSort
+-Merge sort. 
+-Selection sort.
+-Insertion sort.
+-Quick sort.
+-Busqueda binaria.
+-Sequential Search.
+

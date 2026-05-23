@@ -10,7 +10,7 @@ public class Song {
     public Song(int id, String title, String artist, String genre, int year, long plays) {
         this.id = id;
         this.title = title;
-        this.artist = artist;
+        this.artist =artist;
         this.genre = genre;
         this.year = year;
         this.plays = plays;
@@ -25,10 +25,5 @@ public class Song {
     public int getYear() {return year;}
     public long getPlays() {return plays;}
 
-
-    public int compareTo(Song key) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
-    }
 
 }
